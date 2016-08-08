@@ -1,0 +1,27 @@
+Step 1.	Create a database named MyBusiness.
+
+Step 2.	Create a table named Clients with these fields
+
+	ClientID	int
+	FirstName	nvarchar(50)
+	MiddleName	nvarchar(50)
+	LastName	nvarchar(50)
+	Address1	nvarchar(50)
+	Address2	nvarchar(50)
+	City		nvarchar(50)
+	State		nvarchar(50)
+	Zip		nvarchar(50)
+	Phone1		nvarchar(50)
+	Phone2		nvarchar(50)
+	Email		nvarchar(50)
+	Age		int
+
+	Note:	Don't forget to set ClientID as a Primary Key.
+
+	Note:	Remember to make ClientID to autoincrement its value.
+			
+3.	Add three records to the table.
+
+4.	Create a query to find out all the clients that
+	live in Burbank or are older than 25.
+
