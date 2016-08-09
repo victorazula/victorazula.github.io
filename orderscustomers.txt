@@ -1,0 +1,27 @@
+create database database001
+go
+
+use database001
+go
+
+create table customers
+(
+customerid int identity(1,1) primary key,
+firstname nvarchar(50),
+lastname nvarchar(50),
+city nvarchar(50),
+age int
+
+)
+
+create table orders
+(
+orderid int identity(1,1) primary key,
+orderdate date,
+customerid int,
+orderamount money,
+CONSTRAINT fk_orderscustomers FOREIGN KEY (customerid)
+REFERENCES customers(customerid)
+)
+
+
