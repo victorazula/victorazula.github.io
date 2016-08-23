@@ -1,0 +1,33 @@
+<div class="container">
+
+
+<div class="row">
+
+    <div class="col-md-3">
+
+        <img src="http://azulait.com/beach1.jpg" class="img img-responsive">
+
+    </div>
+
+    <div class="col-md-3">
+
+        <img src="http://azulait.com/beach2.jpg" class="img img-responsive">
+
+    </div>
+
+    <div class="col-md-3">
+
+        <img src="http://azulait.com/beach3.jpg" class="img img-responsive">
+
+    </div>
+
+    <div class="col-md-3">
+
+        <img src="http://azulait.com/beach4.jpg" class="img img-responsive">
+
+    </div>
+
+
+
+
+</div>
