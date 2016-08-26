@@ -22,18 +22,21 @@
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
       
-		
+	<script>
+   			setTimeout(function() {
+    		$('#xxx').delay().hide(1);;
+			}, 4000);
+	</script>	
       
    </head>
    
    <body>
    
-		<div class="container-fluid">
-				<video autoplay="true">
-  <source src="http://azulait.com/foundation.mp4" type="video/mp4">
-  
-  Your browser does not support the video tag.
-</video>
+   
+		<div id="xxx" class="container-fluid">
+				<video autoplay="true" controls="true">
+  					<source src="http://azulait.com/foundation.mp4" type="video/mp4"> 
+  				</video>
 		</div>
    
 		<div class="container">
