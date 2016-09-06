@@ -1,0 +1,80 @@
+body
+ {
+ 
+ }
+  
+p
+ { 
+	font-family:"Times New Roman", Times, serif;
+ }
+  
+ p.center
+ {
+	text-align:center;
+ }
+ 
+ #top_division
+{
+	background-color:yellow;
+	text-align:center;
+	color:blue;
+	position:absolute;
+	top:50px;
+	left:100px;
+	height:100px;
+	width:500px;
+
+
+}
+
+#bottom_division
+{
+	background-color:yellow;
+	text-align:center;
+	color:red;
+	position:absolute;
+	left:100px;
+	top:400px;
+	height:150px;
+	width:500px;
+}
+
+
+#left_division
+{
+	background-color:green;
+	text-align:center;
+	color:orange;
+	position:absolute;
+	left:100px;
+	top:150px;
+	width:125px;
+	height:250px;
+}
+
+#middle_division
+{
+	background-color:red;
+	text-align:center;
+	color:yellow;
+	position:absolute;
+	left:225px;
+	top:150px;
+	height:250px;
+	width:200px;
+}
+
+
+#right_division
+{
+	background-color:blue;
+	color:white;
+	position:absolute;
+	left:425px;
+	top:150px;
+	height:250px;
+	width:175px;
+}
+
+
+
