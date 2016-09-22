@@ -1,0 +1,28 @@
+Exercise:
+
+
+1.	Go to http://krebner.com/ps001.jpg and download the image to
+	your desktop.
+
+
+2.	Follow the steps shown at http://tinyurl.com/glendalephotoshop
+	to crop, resize and rotate the image. Don't forget to get rid
+	of the blemishes before doing that.
+
+3.	Create a new HTML file named photos.html and write this code:
+
+	<!DOCTYPE html>
+	<html>
+		<head>
+		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		</head>
+
+	<body>
+
+		<h1>Working with PS.</h1>
+
+		<img src="ps001.jpg" class="img img-responsive">
+
+	</body>
+
+	</html>
