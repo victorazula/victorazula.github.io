@@ -1,0 +1,37 @@
+
+Project:	
+
+0.	Create a folder on your desktop named Friday.
+
+1.	Go to the Internet and get a full body portrait of Theresa May,
+	Angela Merkel and Erna Solberg and save them on the Friday folder.
+
+2.	Go again to the Internet and get an image of the Eiffel tower. Save
+	it on the Friday folder.
+
+3.	Crop, resize and retouch the pictures using Photoshop.
+
+4.	Get the three pictures "merged" with the Eiffel tower on the 
+	background and name the picture ministers.jpg
+
+5.	Create an HTML file named friday.html in the Friday folder and
+	write this code:
+
+	<!DOCTYPE html>
+
+	<html>
+		<head>
+		<link rel="stylesheet" type="text/css"
+		 href="http://krebner.com/bootstrap.css">
+		</head>
+
+	<body>
+
+		<h1>Prime ministers.</h1>
+
+		<img src="ministers.jpg" class="img img-responsive">
+
+	</body>
+
+	</html>
+
