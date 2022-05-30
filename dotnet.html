@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="utf-8">
+    	 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<title>Microsoft DOT NET</title>
+	<meta name="description" content="Information Technology">
+    	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    	<meta name="author" content="GR8">
+    	<link rel="shortcut icon" href="https://krebner.com/networkplus.ico" />
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <script>
+  
+  window.onload = function() {
+    document.addEventListener("contextmenu", function(e){
+      e.preventDefault();
+    }, false);
+    document.addEventListener("keydown", function(e) {
+    //document.onkeydown = function(e) {
+      // "I" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 73) {
+        disabledEvent(e);
+      }
+      // "J" key
+      if (e.ctrlKey && e.shiftKey && e.keyCode == 74) {
+        disabledEvent(e);
+      }
+      // "S" key + macOS
+      if (e.keyCode == 83 && (navigator.platform.match("Mac") ? e.metaKey : e.ctrlKey)) {
+        disabledEvent(e);
+      }
+      // "U" key
+      if (e.ctrlKey && e.keyCode == 85) {
+        disabledEvent(e);
+      }
+      // "F12" key
+      if (event.keyCode == 123) {
+        disabledEvent(e);
+      }
+    }, false);
+    function disabledEvent(e){
+      if (e.stopPropagation){
+        e.stopPropagation();
+      } else if (window.event){
+        window.event.cancelBubble = true;
+      }
+      e.preventDefault();
+      return false;
+    }
+  };
+</script> 
+    
+</head>
+<body oncontextmenu="alert('Make it happen!');return false;" onselectstart="return false" ondragstart="return false" >
+
+    <div class="container-fluid" style="font-size:150%;">
+     <nav class="navbar navbar-dark navbar-expand-lg fixed-top bg-dark navbar-custom">
+        <div class="container">
+            
+            <a class="navbar-brand" href="https://visualstudio.microsoft.com/dev-essentials/"><strong> Essentials </strong></a><button class="navbar-toggler" data-toggle="collapse" data-target="#navbarResponsive"><span class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarResponsive">
+                        <ul class="nav navbar-nav ml-auto">
+
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://docs.microsoft.com/en-us/events/learntv/lets-learn-dotnet-maui-june-2022/" target="_blank"><span style="color: greenyellow;"> MAUI   </span></a></li>
+
+                    <li class="nav-item" role="presentation"><a class="nav-link" href="https://www.microsoft.com/en-us/microsoft-viva" target="_blank"><span style="color: red;"> VIVA   </span></a></li>
+				
+					
+                        </ul>
+                    </div>
+        </div>
+    </nav>        
+    </div>
+
+<div class="container text-center" style="font-size:200%;">
+    <br>
+    <br>
+    <br>
+		<strong> Microsoft .NET </strong>
+	<br>
+	<hr>
+
+	<a href="https://docs.microsoft.com/en-us/dotnet/fundamentals/"  class="btn btn-lg border-primary" target="_blank"> .NET Documentation		</a>
+	<a href="https://docs.microsoft.com/en-us/dotnet/core/sdk"  class="btn btn-lg border-primary" target="_blank">What is the .NET SDK		</a>
+	<a href="https://github.com/dotnet/core/tree/main/release-notes/6.0"  class="btn btn-lg border-primary" target="_blank">Release Notes (at Github)		</a>
+	<a href="https://docs.microsoft.com/en-us/dotnet/core/tutorials/"  class="btn btn-lg border-primary" target="_blank">.NET and .NET SDK Tutorials		</a>
+	<a href="https://docs.microsoft.com/en-us/dotnet/core/tools/telemetry"  class="btn btn-lg border-primary" target="_blank">.NET SDK and .NET CLI telemetry		</a>
+	<a href="https://visualstudio.microsoft.com/"  class="btn btn-lg border-primary" target="_blank"> Visual Studio		</a>
+	<a href="https://devblogs.microsoft.com/visualstudio/"  class="btn btn-lg border-primary" target="_blank">	Visual Studio Blog	</a>
+	<a href="https://devblogs.microsoft.com/dotnet/announcing-net-6/"  class="btn btn-lg border-primary" target="_blank">	Announcing .NET 6	</a>
+	<a href="https://docs.microsoft.com/en-us/aspnet/core/release-notes/aspnetcore-6.0?view=aspnetcore-6.0"  class="btn btn-lg border-primary" target="_blank">What's new in ASP.NET Core 6.0		</a>
+	<a href="https://dotnet.microsoft.com/en-us/apps/aspnet"  class="btn btn-lg border-primary" target="_blank">ASP.NET		</a>
+	<a href="https://mybuild.microsoft.com/en-US/home"  class="btn btn-lg border-primary" target="_blank">	Microsoft Build (Videos!)	</a>
+	<a href="https://www.howtogeek.com/devops/why-webassembly-frameworks-are-the-future-of-the-web/"  class="btn btn-lg border-primary" target="_blank">Web Assembly		</a>
+	<a href="https://www.howtogeek.com/devops/what-is-microsofts-blazor-web-framework-and-should-you-use-it/"  class="btn btn-lg border-primary" target="_blank">Blazor		</a>
+
+	<!--
+		<a href=""  class="btn btn-lg border-primary" target="_blank">		</a>
+	-->
+
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img src="https://www.krebner.com/calendar2022.svg" class="img-fluid d-block mx-auto">
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
