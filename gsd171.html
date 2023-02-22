@@ -1,0 +1,105 @@
+
+<!doctype html>
+<html lang="en">
+  <head>   
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title> WD WWS - GSD </title>
+    <style>
+        body {background-color: whitesmoke;
+                font-size: larger;}
+        
+    </style>
+  </head>
+
+  <body>
+    <div class="container text-center d-grid gap-2">
+    <br>  
+    <h2>Workday Web Services (WWS) for Time Tracking, Absence Management and Messaging.</h2>
+    <br><hr>
+    <h2> Workday Web Services and Operations: </h2>    
+
+    <a href="https://community.workday.com/sites/default/files/file-hosting/productionapi/index.html" target="_blank" class="btn btn-lg btn-block btn-primary">
+        List of all WWS (APIs)
+    </a>
+
+    <a href="https://community.workday.com/sites/default/files/file-hosting/productionapi/operations/index.html" target="_blank" class="btn btn-lg btn-block btn-primary">
+        List of all Operations
+    </a>
+
+    <hr>
+    <br>
+    <h2> Workday - Web Services Description Language (WSDL)</h2>
+
+    <a href="https://wd2-impl-services1.workday.com/ccx/service/lacity3/Time_Tracking/v39.2/?wsdl" target="_blank" class="btn btn-lg btn-block btn-primary">
+        Time_Tracking web service
+    </a>
+
+    <a href="https://wd2-impl-services1.workday.com/ccx/service/lacity3/Absence_Management/v39.2/?wsdl" target="_blank" class="btn btn-lg btn-block btn-primary">
+        Absence_Management web service
+    </a>
+
+    <a href="https://wd2-impl-services1.workday.com/ccx/service/lacity3/Integrations/v39.2/?wsdl" target="_blank" class="btn btn-lg btn-block btn-primary">
+        Integrations web service (for messages, including exceptions)
+    </a>
+    
+    <br><hr>
+    <h2>Operations </h2>
+
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th> WWS    </th>   <th> Operation    </th>   <th> Notes    </th>
+        </tr>
+
+        <tr>
+            <td> Time_Tracking    </td>   <td> Import_Reported_Time_Blocks_Request   </td>   <td> To input blocks of data    </td>
+        </tr>
+
+        <tr>
+            <td> Absence_Management    </td>   <td>Import_Time_Off_Request_Event_Batch_Request    </td>   <td> To input blocks of data     </td>
+        </tr>
+
+        <tr>
+            <td> Integrations   </td>   <td>Get_Import_Process_Messages    </td>   <td> To read messages given a Workday ID (WID)    </td>
+        </tr>
+
+    </table>
+    <br><hr>
+    <h2>Tools to send SOAP requests to Workday WWS</h2>
+    <br>
+    <a href="https://www.soapui.org/tools/soapui/" target="_blank" class="btn btn-lg btn-warning">
+        <h3>SOAPUI (free open source)</h3>
+    </a>
+    &nbsp;
+    <a href="https://www.postman.com/" target="_blank" class="btn btn-lg btn-danger">
+        <h3>Postman</h3>
+    </a>
+
+    <br><hr>
+
+    
+    
+    </div>    
+      
+
+
+
+
+
+
+
+
+
+
+      
+    <!--
+         <a href="" target="_blank" class="">
+        
+        </a>
+    -->
+      
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  
+  </body>
+</html>
