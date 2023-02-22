@@ -1,0 +1,114 @@
+Time_Tracking Request Example:
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:bsvc="urn:com.workday/bsvc">
+   <soapenv:Header>
+
+   </soapenv:Header>
+   <soapenv:Body>
+      <bsvc:Import_Reported_Time_Blocks_Request bsvc:version="v39.2">
+         <bsvc:Reported_Time_Block_Data>
+            <bsvc:Worker_Reference>
+               <bsvc:ID bsvc:type="Employee_ID">402777</bsvc:ID>
+            </bsvc:Worker_Reference>
+            <!-- You can use the Time Block ID once only. Once used, it will only Update that time block, not create a new entry. -->
+            <bsvc:ID>Test_Import_02062023_03</bsvc:ID>
+            
+            <bsvc:Time_Entry_Code_Reference>
+               <bsvc:ID bsvc:type="Time_Code_Reference_ID">HW</bsvc:ID>
+            </bsvc:Time_Entry_Code_Reference>
+            
+            <bsvc:Date>2022-12-21</bsvc:Date>
+            
+            <bsvc:Quantity>1</bsvc:Quantity>
+            
+            <!--Workorder-->
+            <bsvc:Custom_Organization_05_Reference>
+               <bsvc:ID bsvc:type="Organization_Reference_ID">WO_86_86M0S027</bsvc:ID>
+            </bsvc:Custom_Organization_05_Reference>
+            
+            <!--Task/SubTask-->
+            <bsvc:Custom_Organization_07_Reference>
+               <bsvc:ID bsvc:type="Organization_Reference_ID">86_862_000</bsvc:ID>
+            </bsvc:Custom_Organization_07_Reference>
+            
+            <!--FMS Department-->
+            <bsvc:Custom_Worktag_06_Reference>
+               <bsvc:ID bsvc:type="Custom_Worktag_06_ID">86 - PUBLIC WORKS - STREET SERVICES</bsvc:ID>
+            </bsvc:Custom_Worktag_06_Reference>
+            
+            <bsvc:Comment>Time Block import via API SG.VA</bsvc:Comment>
+            
+         </bsvc:Reported_Time_Block_Data>
+      </bsvc:Import_Reported_Time_Blocks_Request>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+Absence_Management Request Example:
+
+<env:Envelope
+    xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <env:Body>
+        <wd:Import_Time_Off_Request_Event_Batch_Request
+            xmlns:wd="urn:com.workday/bsvc"
+            wd:version="v39.0">
+            <wd:Enter_Time_Off_Data>
+                <!-- <wd:Turn_Off_Run_Time_Calculations_with_Time_Off_Approval>true</wd:Turn_Off_Run_Time_Calculations_with_Time_Off_Approval> -->
+                <!-- <wd:Run_Time_Off_Validations></wd:Run_Time_Off_Validations> -->
+                <wd:Worker_Reference>
+                    <wd:ID wd:type="Employee_ID">44942</wd:ID>
+                </wd:Worker_Reference>
+                <wd:Enter_Time_Off_Entry_Data>
+                    <!-- If this valued is not specified WD will generate it -->
+                    <!-- <wd:Time_Off_Entry_ID>Test_Time_Sample_020623_351646_1</wd:Time_Off_Entry_ID> -->
+                    <!-- Specify the date of the absence request -->
+                    <wd:Date>2022-12-15</wd:Date>
+                    <!-- This is how many hours associated with this absence request -->
+                    <wd:Requested>2</wd:Requested>
+                    <!-- <wd:Time_Off_Type_Reference><wd:ID wd:type="Time_Off_Type_ID">abcdef</wd:ID></wd:Time_Off_Type_Reference><wd:Time_Off_Reference><wd:ID wd:type="Time_Off_Code">abcdef</wd:ID></wd:Time_Off_Reference> -->
+                <!-- Absence Table data will use the following 
+                    Family Illness (Drawing from Sick Balances) : FI
+                    Sick : SK
+                    Sick Preventive Medicine : PM 
+                 
+                    -->
+                <wd:Absence_Table_Reference>
+                    <wd:ID wd:type="Absence_Table_ID">SK</wd:ID>
+                </wd:Absence_Table_Reference>
+                <!-- Uncomment this if a position is associated with the absence request -->
+                <!-- <wd:Position_Reference><wd:ID wd:type="Position_ID">abcdef</wd:ID></wd:Position_Reference> -->
+                <!-- Used when there needs to be a reason associated with the request -->
+                <!-- <wd:Time_Off_Reason_Reference><wd:ID wd:type="Time_Off_Reason_ID">abcdef</wd:ID></wd:Time_Off_Reason_Reference> -->
+                <wd:Comment>Sample Import from an API 02.06.2023</wd:Comment>
+            </wd:Enter_Time_Off_Entry_Data>
+        </wd:Enter_Time_Off_Data>
+    </wd:Import_Time_Off_Request_Event_Batch_Request>
+</env:Body>
+</env:Envelope>
+
+Integration Request Example (to show messages):
+
+<?xml version="1.0" encoding="utf-8"?>
+<env:Envelope
+    xmlns:env="http://schemas.xmlsoap.org/soap/envelope/"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+
+    <env:Body>
+        <wd:Get_Import_Process_Messages_Request
+            xmlns:wd="urn:com.workday/bsvc"
+            wd:version="v39.0">
+            <wd:Request_Criteria>
+                <wd:Import_Process_Reference>
+                    <wd:ID wd:type="WID">e954aed2459410016d27d280c6cb0000</wd:ID>
+                </wd:Import_Process_Reference>
+            </wd:Request_Criteria>
+            <wd:Response_Filter>
+                <!-- <wd:As_Of_Effective_Date>2023-02-07</wd:As_Of_Effective_Date> -->
+                <!-- <wd:As_Of_Entry_DateTime>2023-02-07T10:31:23</wd:As_Of_Entry_DateTime> -->
+                <wd:Page>1</wd:Page>
+                <wd:Count>999</wd:Count>
+            </wd:Response_Filter>
+        </wd:Get_Import_Process_Messages_Request>
+    </env:Body>
+</env:Envelope>
