@@ -1,0 +1,105 @@
+The input_form.cfm
+
+<h3>Add a New Employee</h3>
+
+<form action="actionpage.cfm" method="post">
+  <label for="firstName">First Name:</label><br>
+  <input type="text" id="firstName" name="firstName" required><br><br>
+
+  <label for="lastName">Last Name:</label><br>
+  <input type="text" id="lastName" name="lastName" required><br><br>
+
+  <label for="department">Department:</label><br>
+  <input type="text" id="department" name="department"><br><br>
+
+  <input type="submit" value="Submit">
+</form>
+
+The actionpage.cfm
+
+<!--- Check that form fields exist before processing --->
+<cfif isDefined("form.firstName") and isDefined("form.lastName")>
+  <!---
+    Insert the new record into the "Employees" table.
+    Replace "your_datasource_name" with the name of the DSN
+    (Data Source Name) you configured in the ColdFusion Administrator.
+  --->
+  <cfquery name="addEmployee" datasource="your_datasource_name">
+    INSERT INTO Employees (
+      FirstName,
+      LastName,
+      Department
+    )
+    VALUES (
+      <cfqueryparam value="#form.firstName#" cfsqltype="cf_sql_varchar">,
+      <cfqueryparam value="#form.lastName#" cfsqltype="cf_sql_varchar">,
+      <cfqueryparam value="#form.department#" cfsqltype="cf_sql_varchar">
+    )
+  </cfquery>
+
+  <h1>Employee Added</h1>
+  <p>The following employee has been added:</p>
+  <cfoutput>
+    <ul>
+      <li>Name: #form.firstName# #form.lastName#</li>
+      <li>Department: #form.department#</li>
+    </ul>
+  </cfoutput>
+<cfelse>
+  <p>No form data was submitted.</p>
+</cfif>
+
+Yet another form:
+
+<html>
+<head>
+<title>Input form</title>
+</head>
+<body>
+<!--- Specify the action page in the form tag. The form variables will
+pass to this page when the form is submitted. --->
+
+<cfform action="actionpage.cfm" method="post">
+
+<!--- Text box. --->
+<p>
+First Name: <cfinput type="Text" name="FirstName" size="20"maxlength="35"><br>
+Last Name: <cfinput type="Text" name="LastName" size="20" maxlength="35"><br>
+Salary: <cfinput type="Text" name="Salary" size="10" maxlength="10">
+</p>
+
+<!--- List box. --->
+<p>
+City
+<cfselect name="City">
+<option value="Arlington">Arlington
+<option value="Boston">Boston
+<option value="Cambridge">Cambridge
+<option value="Minneapolis">Minneapolis
+<option value="Seattle">Seattle
+</cfselect>
+</p>
+
+<!--- Radio buttons. --->
+<p>
+Department:<br>
+<cfinput type="radio" name="Department" value="Training">Training<br>
+<cfinput type="radio" name="Department" value="Sales">Sales<br>
+<input type="radio" name="Department"
+value="Marketing">Marketing<br>
+</p>
+
+<!--- Check box. --->
+<p>
+Contractor? <cfinput type="checkbox" name="Contractor"
+value="Yes" checked>Yes
+</p>
+
+<!--- Reset button. --->
+<cfinput type="Reset" name="ResetForm" value="Clear Form">
+<!--- submit button --->
+<cfinput type="Submit" name="SubmitForm" value="Submit">
+
+</cfform>
+</body>
+</html>
