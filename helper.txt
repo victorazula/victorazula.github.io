@@ -1,0 +1,1 @@
+builder.Services.AddDbContext<db0001Context>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("Default Connection")));
