@@ -1,0 +1,20 @@
+$VideoFolderPath = "C:\users\victo\videos\boe_videos\" # Specify the path to your video folder
+$VideoExtensions = @("*.mp4", "*.avi", "*.mov", "*.wmv", "*.mkv") # Add or remove video extensions as needed
+
+$objShell = New-Object -ComObject Shell.Application
+$results = @()
+
+Get-ChildItem -Path $VideoFolderPath -Recurse -Include $VideoExtensions | ForEach-Object {
+    $folder = $objShell.Namespace($_.DirectoryName)
+    $file = $folder.ParseName($_.Name)
+    $duration = $folder.GetDetailsOf($file, 27) # 27 is the index for 'Length' (duration)
+
+    if ($duration) {
+        $results += [PSCustomObject]@{
+            FileName = $_.Name
+            Duration = $duration
+        }
+    }
+}
+
+$results | Format-Table -AutoSize
